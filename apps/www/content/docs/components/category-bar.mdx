@@ -1,0 +1,140 @@
+---
+title: Category Bar
+description: A horizontal bar that displays a list of categories.
+component: true
+---
+
+<ComponentPreview 
+    name="category-bar" 
+    title="Category Bar"
+    description="A horizontal bar that displays a list of categories."
+/>
+
+## About
+The category bar component is a horizontal bar that displays a list of categories. It is used to filter content based on the selected category.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add category-bar
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install category-bar
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="category-bar" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+    CategoryBar,
+    CategoryBarItem
+    } from "@/components/ui/category-bar"
+```
+
+```tsx
+<CategoryBar>
+  <CategoryBarItem>Category 1</CategoryBarItem>
+  <CategoryBarItem>Category 2</CategoryBarItem>
+  <CategoryBarItem>Category 3</CategoryBarItem>
+</CategoryBar>
+```
+
+## Examples
+
+### Thickness
+
+Use the `thickness` prop to set the size of the category bar.
+
+<ComponentPreview
+    name="category-bar" 
+    description="The category bar component comes in three thickness: small, medium, and large."
+/>
+
+```tsx title="Example for small" showLineNumbers {4-6}
+<CategoryBar thickness="s">
+  <CategoryBarItem>Category 1</CategoryBarItem>
+  <CategoryBarItem>Category 2</CategoryBarItem>
+  <CategoryBarItem>Category 3</CategoryBarItem>
+</CategoryBar>
+```
+
+### Percentage
+
+Use the `percentage` prop to display the category bar as a percentage.
+
+<ComponentPreview
+    name="category-bar" 
+    description="The category bar component can be displayed as a percentage."
+/>
+
+```tsx title="Example for percentage" showLineNumbers {4-6}
+<CategoryBar percentage>
+  <CategoryBarItem>Category 1</CategoryBarItem>
+  <CategoryBarItem>Category 2</CategoryBarItem>
+  <CategoryBarItem>Category 3</CategoryBarItem>
+</CategoryBar>
+```
+
+### Cumulative
+
+Use the `cumulative` prop to display the category bar as a cumulative percentage.
+
+<ComponentPreview
+    name="category-bar"
+    description="The category bar component can be displayed as a cumulative percentage."
+/>
+
+```tsx title="Example for cumulative" showLineNumbers {4-6}
+<CategoryBar cumulative>
+  <CategoryBarItem>Category 1</CategoryBarItem>
+  <CategoryBarItem>Category 2</CategoryBarItem>
+  <CategoryBarItem>Category 3</CategoryBarItem>
+</CategoryBar>
+```
+
+### Legend
+
+Use the `legend` prop to display a legend for the category bar.
+
+<ComponentPreview
+    name="category-bar"
+    description="The category bar component can display a legend."
+/>
+
+```tsx title="Example for legend" showLineNumbers {4-6}
+<CategoryBar legend>
+  <CategoryBarItem>Category 1</CategoryBarItem>
+  <CategoryBarItem>Category 2</CategoryBarItem>
+  <CategoryBarItem>Category 3</CategoryBarItem>
+</CategoryBar>
+```

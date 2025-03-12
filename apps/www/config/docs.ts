@@ -220,6 +220,16 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Category Bar",
+          href: "/docs/components/category-bar",
+          items: [],
+        },
+        {
+          title: "Checkbox Group",
+          href: "/docs/components/checkbox-group",
+          items: [],
+        },
+        {
           title: "Chart",
           href: "/docs/components/chart",
           items: [],

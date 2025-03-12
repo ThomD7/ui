@@ -1,7 +1,5 @@
-"use client"
-
-import CategoryBar from "@/registry/default/ui/category-bar"
-import CategoryBarItem from "@/registry/default/ui/category-bar-item"
+import CategoryBar from "@/registry/default/ui/category-bar";
+import CategoryBarItem from "@/registry/default/ui/category-bar-item";
 
 export default function CategoryBarDemo() {
   return (

@@ -1,4 +1,4 @@
-import * as React from "react"
+"use client"
 
 interface CategoryBarProps {
   children: React.ReactElement[]
@@ -45,9 +45,8 @@ export default function CategoryBar({
 
   return (
     <div
-      className={`flex flex-col items-center w-full ${className} ${
-        percentage ? "mt-10" : ""
-      }`}
+      className={`flex flex-col items-center w-full ${className} ${percentage ? "mt-10" : ""
+        }`}
     >
       {/* Progress Bar */}
       <div
@@ -60,9 +59,8 @@ export default function CategoryBar({
             return (
               <div
                 key={child.props.title}
-                className={`absolute top-0 left-0 h-full ${
-                  index === 0 ? "rounded-l-full" : ""
-                } rounded-r-full hover:brightness-90`}
+                className={`absolute top-0 left-0 h-full ${index === 0 ? "rounded-l-full" : ""
+                  } rounded-r-full hover:brightness-90`}
                 style={{
                   width: `${cumulativeValue}%`,
                   backgroundColor: child.props.color,
@@ -81,11 +79,10 @@ export default function CategoryBar({
                 key={`marker-${index}`}
                 className="absolute -top-8 flex flex-col items-center"
                 style={{
-                  left: `${
-                    cumulative
+                  left: `${cumulative
                       ? pos
                       : markers.slice(0, index + 1).reduce((a, b) => a + b, 0)
-                  }%`,
+                    }%`,
                   transform: "translateX(-50%)",
                 }}
               >

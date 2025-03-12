@@ -10,6 +10,8 @@ import { lib } from "@/registry/registry-lib"
 import { themes } from "@/registry/registry-themes"
 import { ui } from "@/registry/registry-ui"
 
+export * from "./default/ui/category-bar"
+
 export const registry = {
   name: "shadcn/ui",
   homepage: "https://ui.shadcn.com",

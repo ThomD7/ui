@@ -97,6 +97,9 @@
   {
     "name": "badge",
     "type": "registry:ui",
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
     "files": [
       {
         "path": "ui/badge.tsx",
@@ -169,6 +172,16 @@
     "files": [
       {
         "path": "ui/carousel.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "category-bar",
+    "type": "registry:ui",
+    "files": [
+      {
+        "path": "ui/category-bar.tsx",
         "type": "registry:ui"
       }
     ]

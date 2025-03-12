@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "category-bar-demo-legend",
+  "type": "registry:example",
+  "author": "shadcn (https://ui.shadcn.com)",
+  "registryDependencies": [
+    "category-bar",
+    "category-bar-item"
+  ],
+  "files": [
+    {
+      "path": "examples/category-bar-demo-legend.tsx",
+      "content": "import CategoryBar from \"@/registry/default/ui/category-bar\"\nimport CategoryBarItem from \"@/registry/default/ui/category-bar-item\"\n\nexport default function CategoryBarDemo() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <CategoryBar thickness=\"m\" legend className=\"mt-4\">\n        <CategoryBarItem value={25} title=\"HTML\" color=\"#E44D26\" />\n        <CategoryBarItem value={35} title=\"CSS\" color=\"#1572B6\" />\n        <CategoryBarItem value={40} title=\"JavaScript\" color=\"#F7DF1E\" />\n      </CategoryBar>\n    </div>\n  )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -398,6 +398,61 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "category-bar-demo",
+    type: "registry:example",
+    registryDependencies: ["category-bar", "category-bar-item"],
+    files: [
+      {
+        path: "examples/category-bar-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "category-bar-demo-percentage",
+    type: "registry:example",
+    registryDependencies: ["category-bar", "category-bar-item"],
+    files: [
+      {
+        path: "examples/category-bar-demo-percentage.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "category-bar-demo-cumulative",
+    type: "registry:example",
+    registryDependencies: ["category-bar", "category-bar-item"],
+    files: [
+      {
+        path: "examples/category-bar-demo-cumulative.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "category-bar-demo-legend",
+    type: "registry:example",
+    registryDependencies: ["category-bar", "category-bar-item"],
+    files: [
+      {
+        path: "examples/category-bar-demo-legend.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "category-bar-demo-thickness",
+    type: "registry:example",
+    registryDependencies: ["category-bar", "category-bar-item"],
+    files: [
+      {
+        path: "examples/category-bar-demo-thickness.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "checkbox-demo",
     type: "registry:example",
     registryDependencies: ["checkbox"],

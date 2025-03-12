@@ -146,6 +146,16 @@ export const ui: Registry["items"] = [
     dependencies: ["embla-carousel-react"],
   },
   {
+    name: "category-bar",
+    type: "registry:ui",
+    files: [
+      {
+        path: "ui/category-bar.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
     name: "chart",
     type: "registry:ui",
     files: [

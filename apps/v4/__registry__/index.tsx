@@ -268,6 +268,24 @@ export const Index: Record<string, any> = {
     }),
     meta: undefined,
   },
+  "category-bar": {
+    name: "category-bar",
+    description: "",
+    type: "registry:ui",
+    files: [
+      {
+        path: "registry/default/ui/category-bar.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    categories: undefined,
+    component: React.lazy(
+      () => import("@/registry/default/ui/category-bar.tsx")
+    ),
+    source: "",
+    meta: undefined,
+  },
   chart: {
     name: "chart",
     description: "",

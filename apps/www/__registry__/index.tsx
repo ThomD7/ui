@@ -170,6 +170,21 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "category-bar": {
+      name: "category-bar",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/new-york/ui/category-bar.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/ui/category-bar.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "chart": {
       name: "chart",
       description: "",
@@ -3622,6 +3637,81 @@ export const Index: Record<string, any> = {
       source: "",
       meta: undefined,
     },
+    "category-bar-demo": {
+      name: "category-bar-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/new-york/examples/category-bar-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/examples/category-bar-demo.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-percentage": {
+      name: "category-bar-demo-percentage",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/new-york/examples/category-bar-demo-percentage.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/examples/category-bar-demo-percentage.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-cumulative": {
+      name: "category-bar-demo-cumulative",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/new-york/examples/category-bar-demo-cumulative.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/examples/category-bar-demo-cumulative.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-legend": {
+      name: "category-bar-demo-legend",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/new-york/examples/category-bar-demo-legend.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/examples/category-bar-demo-legend.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-thickness": {
+      name: "category-bar-demo-thickness",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/new-york/examples/category-bar-demo-thickness.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/new-york/examples/category-bar-demo-thickness.tsx")),
+      source: "",
+      meta: undefined,
+    },
     "checkbox-demo": {
       name: "checkbox-demo",
       description: "",
@@ -5465,6 +5555,21 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/ui/carousel.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar": {
+      name: "category-bar",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/category-bar.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/category-bar.tsx")),
       source: "",
       meta: undefined,
     },
@@ -8917,6 +9022,81 @@ export const Index: Record<string, any> = {
       }],
       categories: undefined,
       component: React.lazy(() => import("@/registry/default/examples/carousel-plugin.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo": {
+      name: "category-bar-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/default/examples/category-bar-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/category-bar-demo.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-percentage": {
+      name: "category-bar-demo-percentage",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/default/examples/category-bar-demo-percentage.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/category-bar-demo-percentage.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-cumulative": {
+      name: "category-bar-demo-cumulative",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/default/examples/category-bar-demo-cumulative.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/category-bar-demo-cumulative.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-legend": {
+      name: "category-bar-demo-legend",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/default/examples/category-bar-demo-legend.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/category-bar-demo-legend.tsx")),
+      source: "",
+      meta: undefined,
+    },
+    "category-bar-demo-thickness": {
+      name: "category-bar-demo-thickness",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["category-bar","category-bar-item"],
+      files: [{
+        path: "registry/default/examples/category-bar-demo-thickness.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      categories: undefined,
+      component: React.lazy(() => import("@/registry/default/examples/category-bar-demo-thickness.tsx")),
       source: "",
       meta: undefined,
     },

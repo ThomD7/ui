@@ -4,13 +4,14 @@ description: A horizontal bar that displays a list of categories.
 component: true
 ---
 
-<ComponentPreview 
-    name="category-bar" 
-    title="Category Bar"
-    description="A horizontal bar that displays a list of categories."
+<ComponentPreview
+  name="category-bar-demo"
+  title="Category Bar"
+  description="A horizontal bar that displays a list of categories."
 />
 
 ## About
+
 The category bar component is a horizontal bar that displays a list of categories. It is used to filter content based on the selected category.
 
 ## Installation
@@ -55,10 +56,7 @@ npm install category-bar
 ## Usage
 
 ```tsx
-import {
-    CategoryBar,
-    CategoryBarItem
-    } from "@/components/ui/category-bar"
+import { CategoryBar, CategoryBarItem } from "@/components/ui/category-bar"
 ```
 
 ```tsx
@@ -76,8 +74,9 @@ import {
 Use the `thickness` prop to set the size of the category bar.
 
 <ComponentPreview
-    name="category-bar" 
-    description="The category bar component comes in three thickness: small, medium, and large."
+  name="category-bar-demo-thickness"
+  title="Category Bar"
+  description="A horizontal bar that displays a list of categories."
 />
 
 ```tsx title="Example for small" showLineNumbers {4-6}
@@ -93,8 +92,9 @@ Use the `thickness` prop to set the size of the category bar.
 Use the `percentage` prop to display the category bar as a percentage.
 
 <ComponentPreview
-    name="category-bar" 
-    description="The category bar component can be displayed as a percentage."
+  name="category-bar-demo-percentage"
+  title="Category Bar"
+  description="A horizontal bar that displays a list of categories."
 />
 
 ```tsx title="Example for percentage" showLineNumbers {4-6}
@@ -110,8 +110,9 @@ Use the `percentage` prop to display the category bar as a percentage.
 Use the `cumulative` prop to display the category bar as a cumulative percentage.
 
 <ComponentPreview
-    name="category-bar"
-    description="The category bar component can be displayed as a cumulative percentage."
+  name="category-bar-demo-cumulative"
+  title="Category Bar"
+  description="A horizontal bar that displays a list of categories."
 />
 
 ```tsx title="Example for cumulative" showLineNumbers {4-6}
@@ -127,8 +128,9 @@ Use the `cumulative` prop to display the category bar as a cumulative percentage
 Use the `legend` prop to display a legend for the category bar.
 
 <ComponentPreview
-    name="category-bar"
-    description="The category bar component can display a legend."
+  name="category-bar-demo-legend"
+  title="Category Bar"
+  description="A horizontal bar that displays a list of categories."
 />
 
 ```tsx title="Example for legend" showLineNumbers {4-6}

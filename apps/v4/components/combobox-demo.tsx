@@ -9,8 +9,12 @@ import {
 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/ui/avatar"
-import { Button } from "@/registry/ui/button"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/registry/new-york-v4/ui/avatar"
+import { Button } from "@/registry/new-york-v4/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -19,8 +23,12 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/ui/command"
-import { Popover, PopoverContent, PopoverTrigger } from "@/registry/ui/popover"
+} from "@/registry/new-york-v4/ui/command"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/registry/new-york-v4/ui/popover"
 
 const frameworks = [
   {
@@ -104,13 +112,14 @@ type Timezone = (typeof timezones)[number]
 
 export function ComboboxDemo() {
   return (
-    <div className="flex w-full flex-col items-start gap-4 md:flex-row">
+    <div className="flex w-full flex-wrap items-start gap-4">
       <FrameworkCombobox frameworks={[...frameworks]} />
       <UserCombobox users={[...users]} selectedUserId={users[0].id} />
       <TimezoneCombobox
         timezones={[...timezones]}
         selectedTimezone={timezones[0].timezones[0]}
       />
+      <ComboboxWithCheckbox frameworks={[...frameworks]} />
     </div>
   )
 }
@@ -327,6 +336,66 @@ function TimezoneCombobox({
                 <PlusCircleIcon />
                 Create timezone
               </CommandItem>
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  )
+}
+
+function ComboboxWithCheckbox({ frameworks }: { frameworks: Framework[] }) {
+  const [open, setOpen] = React.useState(false)
+  const [selectedFrameworks, setSelectedFrameworks] = React.useState<
+    Framework[]
+  >([])
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          role="combobox"
+          aria-expanded={open}
+          className="w-fit min-w-[280px] justify-between"
+        >
+          {selectedFrameworks.length > 0
+            ? selectedFrameworks.map((framework) => framework.label).join(", ")
+            : "Select frameworks (multi-select)..."}
+          <ChevronsUpDown className="text-muted-foreground" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[300px] p-0" align="start">
+        <Command>
+          <CommandInput placeholder="Search framework..." />
+          <CommandList>
+            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandGroup>
+              {frameworks.map((framework) => (
+                <CommandItem
+                  key={framework.value}
+                  value={framework.value}
+                  onSelect={(currentValue) => {
+                    setSelectedFrameworks(
+                      selectedFrameworks.some((f) => f.value === currentValue)
+                        ? selectedFrameworks.filter(
+                            (f) => f.value !== currentValue
+                          )
+                        : [...selectedFrameworks, framework]
+                    )
+                  }}
+                >
+                  <div
+                    className="border-input data-[selected=true]:border-primary data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground pointer-events-none size-4 shrink-0 rounded-[4px] border transition-all select-none *:[svg]:opacity-0 data-[selected=true]:*:[svg]:opacity-100"
+                    data-selected={selectedFrameworks.some(
+                      (f) => f.value === framework.value
+                    )}
+                  >
+                    <CheckIcon className="size-3.5 text-current" />
+                  </div>
+                  {framework.label}
+                </CommandItem>
+              ))}
             </CommandGroup>
           </CommandList>
         </Command>
